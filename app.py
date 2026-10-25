@@ -19,9 +19,9 @@ supabase = init_connection()
 # --- SISTEMA DE LOGIN MULTI-REGIÃO ---
 def verificar_login():
     credenciais = {
-        "APIAI": "apiai2026",
-        "SANTOS": "santos2026",
-        "BAURU": "bauru2026"
+        "APIAI": st.secrets["SENHA_APIAI"],
+        "SANTOS": st.secrets["SENHA_SANTOS"],
+        "BAURU": st.secrets["SENHA_BAURU"]
     }
     
     if "autenticado" not in st.session_state:
